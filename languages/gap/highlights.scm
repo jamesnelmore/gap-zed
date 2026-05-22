@@ -9,6 +9,9 @@
 
 ; Functions
 (assignment_statement
+  left: (identifier) @function) @function.definition
+
+(assignment_statement
   left: (identifier) @function
   right: (function))
 
@@ -21,10 +24,10 @@
   right: (lambda))
 
 (call
-  function: (identifier) @function @function.call)
+  function: (identifier) @function.call) @function.call.definition
 
 ((call
-  function: (identifier) @function @function.builtin)
+  function: (identifier) @function.builtin)
   (#any-of? @function.builtin "Assert" "Info" "IsBound" "Unbind" "TryNextMethod"))
 
 (parameters
@@ -141,54 +144,54 @@
 
 ; Keywords
 [
-  (break_statement)
-  (continue_statement)
-  "atomic"
-  (quit_statement)
-] @keyword
+  (break_statement) @keyword.break
+  (continue_statement) @keyword.continue
+  "atomic" @keyword
+  (quit_statement) @keyword
+]
 
 [
-  "function"
-  "local"
-  "end"
-] @keyword @keyword.function
+  "function" @keyword.function
+  "local" @keyword.local
+  "end" @keyword.end
+]
 
 [
-  "and"
-  "in"
-  "mod"
-  "not"
-  "or"
-] @keyword @keyword.operator
+  "and" @keyword.operator
+  "in" @keyword.operator
+  "mod" @keyword.operator
+  "not" @keyword.operator
+  "or" @keyword.operator
+]
 
-"rec" @keyword @keyword.type
+"rec" @keyword.type
 
 [
-  "readonly"
-  "readwrite"
-] @keyword @keyword.modifier
+  "readonly" @keyword.modifier
+  "readwrite" @keyword.modifier
+]
 
 (atomic_function
-  "atomic" @keyword @keyword.modifier)
+  "atomic" @keyword.modifier)
 
 [
-  "for"
-  "while"
-  "do"
-  "od"
-  "repeat"
-  "until"
-] @keyword @keyword.repeat
+  "for" @keyword.repeat
+  "while" @keyword.repeat
+  "do" @keyword.repeat
+  "od" @keyword.repeat
+  "repeat" @keyword.repeat
+  "until" @keyword.repeat
+]
 
 [
-  "if"
-  "then"
-  "elif"
-  "else"
-  "fi"
-] @keyword @keyword.conditional
+  "if" @keyword.conditional
+  "then" @keyword.conditional
+  "elif" @keyword.conditional
+  "else" @keyword.conditional
+  "fi" @keyword.conditional
+]
 
-"return" @keyword @keyword.return
+"return" @keyword.return
 
 (pragma) @preproc @keyword.directive
 
