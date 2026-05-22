@@ -1,0 +1,11 @@
+name = "GAP"
+grammar = "gap"
+path_suffixes = ["g", "gd", "gi", "gap", "tst"]
+line_comments = ["# "]
+autoclose_before = ";,])}"
+brackets = [
+  { start = "(", end = ")", close = true, newline = false },
+    { start = "[", end = "]", close = true, newline = false },
+    { start = "{", end = "}", close = true, newline = false },
+    { start = "\"", end = "\"", close = true, not_in = ["string", "comment"], newline = false },
+]

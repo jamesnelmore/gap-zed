@@ -1,0 +1,9 @@
+id = "gap"
+name = "GAP"
+version = "0.0.1"
+schema_version = 1
+description = "GAP (Groups, Algorithms, Programming) syntax highlighting"
+
+[grammars.gap]
+repository = "https://github.com/gap-system/tree-sitter-gap"
+commit = "3fa54a9bce964731f8a3e0fb80d55805dd4ec8f0"
