@@ -1,6 +1,6 @@
 name = "GAP"
 grammar = "gap"
-path_suffixes = ["g", "gd", "gi", "gap", "tst"]
+path_suffixes = ["g", "gd", "gi", "gap"]
 line_comments = ["# "]
 autoclose_before = ";,])}"
 brackets = [
