@@ -1,3 +1,5 @@
+; This file was adapted from the [highlights.scm](https://github.com/gap-system/tree-sitter-gap/blob/3fa54a9bce964731f8a3e0fb80d55805dd4ec8f0/queries/highlights.scm) file of the GAP tree sitter repository under MIT license.
+
 ; NOTE: In case multiple queries match, last query wins — go from least
 ; specific to most specific.
 (identifier) @variable
